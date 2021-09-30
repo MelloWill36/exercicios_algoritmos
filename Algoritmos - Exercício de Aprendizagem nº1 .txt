@@ -1,0 +1,324 @@
+1. Leia um número e exiba seu sucessor.
+
+Inicio:
+	int num = 0;
+	leia(num)
+	imprima(num + 1);  
+Fim;
+
+
+2. Calcular a média final (usando a ponderação da UFRN) dadas as notas das 3 provas e 
+produzir uma saída com a média e a situação do aluno de acordo com o seguinte critério: 
+média >= 7, aprovado; 5 < média < 7, recuperação; média < 5, reprovado.
+
+Inicio:
+	double nota1, nota2, nota3 = 0;
+	media = 0;
+	
+	leia(nota1);
+	leia(nota2);
+	leia(nota3);
+	
+	media = (nota1 + nota2 + nota3) / 3;
+	
+	se(média >= 7);
+		imprima(aprovado);
+	se( 5 < média < 7);
+		imprima(recuperação); 
+	senão( média < 5);	
+		imprima(reprovado); 	
+Fim;
+
+
+3. Calcular a quantidade dinheiro gasta por um fumante. Dados: o número de anos que ele 
+fuma, o nº de cigarros fumados por dia e o preço de uma carteira. 
+
+Inicio:
+	qntAnos, qntCig, preço, media, gasto = 0;
+	
+	leia(qntAnos);
+	leia(qntCig);
+	leia(preço);
+	
+	media = (preço/qntCig)*(qntAnos*365);
+	imprima(gasto);  
+Fim;  
+	
+	
+4. Ler dois números inteiros, x e y, e imprimir o quociente e o resto da divisão inteira entre 
+eles.
+
+Inicio:
+	int num1, num2 = 0;
+	
+	leia(num1);
+	leia(num2);
+	
+	imprima(num1 / num2);
+	imprima(num1 % num2);
+Fim;  
+
+
+5. Que informe a área e o volume de um cilindro. 
+
+Inicio:
+	float raio, h, area,volume = 0;
+	leia(raio);
+	leia(h);
+	
+	area = (2*(3,14*raio*raio) + 2*(3,14*raio*h));
+	volume = (3,14*raio*raio*h);
+	
+	imprima(area);
+	imprima(volume);
+Fim;  
+
+6. Para ler dois valores reais do teclado, calcular e imprimir na tela: 
+a) A soma destes valores b) O produto deles c) O quociente entre eles
+
+Inicio:
+	int num1, num2 = 0;
+	leia(num1);
+	leia(num2);
+	
+	imprima(num1+num2);
+	imprima(num1*num2);
+	imprima(num1/num2);
+
+Fim;
+
+
+7. Para ler 3 números reais do teclado e verificar se o primeiro é maior que a soma dos 
+outros dois. 
+
+Inicio:
+	int razao, num2, num3 = 0;
+	leia(razao);
+	leia(num2);
+	leia(num3);
+	
+	se(num1 < (num2+num3));
+		imprima(verdadeiro);
+	senão 
+		imprima (false)
+			
+Fim;
+
+
+8. Leia a razão de uma PA (Progressão Aritmética) e o seu primeiro e último termos e 
+informe a soma dos elementos dessa PA. 
+
+Inicio:
+	float razao, valorPriTermo, ultTermo, valorUltTermo, soma = 0;
+	leia(razao, valorPriTermo, ultTermo);
+	
+	valorUltTermo = (valorPriTermo + (UltTermo-1) * razao);
+	
+	soma = ((valorPriTermo+valorUltTermo)*ultTermo)/2;
+	
+	imprima(soma);
+	
+Fim;
+
+
+9. Ler um nome do teclado e ver se é igual ao seu nome. Imprimir conforme o caso: “NOME 
+CORRETO” ou “NOME INCORRETO”. 
+
+Inicio:
+	String nome;
+	leia(nome).upper;
+	
+	se(nome == "WILLIAM");
+		imprima(NOME CORRETO);
+	senao
+		imprima(NOME INCORRETO);
+Fim;	
+
+10. Ler 2 números inteiros do teclado (A e B), verificar e imprimir qual deles é o maior, ou a 
+mensagem “A=B” caso sejam iguais. 
+
+Inicio:
+	int num1, num2 = 0;
+	leia(num1);
+	leia(num2);
+	
+	se(num1 > num2);
+		imprima(num1);
+	se(num1 < num2);
+		imprima(num2);
+	senao 
+		imprima ("num1"+ = +"num2");
+Fim;
+
+
+11. Que gere o preço de um carro ao consumidor e os valores pagos pelo imposto e pelo lucro 
+do distribuidor, sabendo o custo de fábrica do carro e que são pagos: a) de imposto: 45% 
+sobre o custo do carro; b) de lucro do distribuidor: 12% sobre o custo do carro. 
+
+Inicio:
+	float custo, imposto45, distribuidor12, valorFinal  = 0;
+	leia(custo);
+	
+	imposto45= (custo*45)/100;
+	distribuidor12 = (custo*12)/100;
+	valorFinal = (custo+imposto45+distribuidor12);
+	
+	imprima(valorFinal);	
+
+Fim;
+
+
+12. Leia a velocidade máxima permitida em uma avenida e a velocidade com que o motorista 
+estava dirigindo nela e calcule a multa que uma pessoa vai receber, sabendo que são 
+pagos: a) 50 reais se o motorista estiver ultrapassar em até 10km/h a velocidade permitida 
+(ex.: velocidade máxima: 50km/h; motorista a 60km/h ou a 56km/h); b) 100 reais, se o 
+motorista ultrapassar de 11 a 30 km/h a velocidade permitida. c) 200 reais, se estiver 
+acima de 31km/h da velocidade permitida.
+
+Inicio:
+	int velocidade = 0;
+	leia(velocidade);
+	se (velocidade > velocidade+10);
+		imprima( Multa R$50);
+	se (velocidade+30 < velocidade > velocidade+11);
+		imprima( Multa R$100);
+	se (velocidade > velocidade+30);
+		imprima( Multa R$200);
+	senao ???
+		
+Fim;
+
+
+13. Sabendo que latão é constituído de 70% de cobre e 30% de zinco, indique a quantidade de 
+cada um desses componentes para se obter uma certa quantidade de latão (requerida pelo 
+usuário). 
+Inicio:
+	int quantidade, cobre70, zinco30 = 0;
+	leia(quantidade);
+	
+	cobre70 = (quantidade*70)/100;
+	zinco30 = (quantidade*30)/100;
+	
+	imprima(cobre70);
+	imprima(zinco30);
+	
+Fim;
+	
+
+14. Ler 2 números inteiros do teclado. Se o segundo for diferente de zero, calcular e imprimir 
+o quociente do primeiro pelo segundo. Caso contrário, imprimir a mensagem: “DIVISÃO 
+POR ZERO”. 
+
+Inicio:
+	int num1, num2 = 0;
+	leia(num1, num2);
+	
+	se (num2 == 0);
+		imprime(DIVISÃO POR ZERO.);
+	senao
+		(num1/num2);
+Fim;
+
+
+15. Ler três valores e determinar o maior dentre eles. 
+
+Inicio:
+	int num1, num2, num3 = 0;
+	leia(num1, num2, num3);
+	
+	se (num1 >=num2 e num1 >=n3
+		imprima(num1);
+	se (num2 >=num1 e num2 >=n3
+		imprima(num2);
+	senao
+		imprima(num3);	
+Fim;
+	
+	
+16. Ler três valores e colocá-los em ordem crescente. 
+
+
+Inicio:
+	int num1, num2, num3 = 0;
+	temp = 0;
+	leia(num1, num2, num3);
+	faça(i=0; i < 4; i++);
+		faça(j=0; j < 4; i++);
+			se(num1 > num3);
+			temp = num1;
+			num1 = num3;
+			num3 = temp;
+			
+			se(num1 > num2);
+			temp = num1;
+			num1 = num2;
+			num2 = temp;
+			
+			se(num2 > num3);
+			temp = num2;
+			num2 = num3;
+			num3 = temp;
+			
+		imprima (num1, num2, num3);
+Fim;
+		
+		
+17. Ler os três coeficientes de uma equação de segundo grau e determinar suas raízes. 
+
+Inicio:
+	double coeficiente1, coeficiente2, coeficiente3 = 0;
+	leia(coeficiente1, coeficiente2, coeficiente3);
+	coeficiente1 = (coeficiente1 **(1/2));
+	coeficiente2 = (coeficiente2 **(1/2));
+	coeficiente3 = (coeficiente3 **(1/2));
+
+	imprima (coeficiente1, coeficiente2, coeficiente3);
+
+Fim;
+
+
+18. Ler três valores do teclado e dizer se eles formam um triângulo. Caso afirmativo, dizer seu 
+tipo (equilátero, isósceles ou escaleno). 
+
+Inicio:
+	float reta1, reta2, reta3 = 0;
+	leia(reta1, reta2, reta3);
+	se(reta1 < reta2+reta3 e reta2 > reta1+reta3 e reta3>reta1+reta2;
+		se reta1 == reta2 == reta3;
+			imprima("Equilátero");
+		se reta1 != reta2 != reta3 != reta1;
+			imprima("Escaleno");
+		entao 
+			imprima("Isósceles");
+	entao
+		imprima("Nao forma um triângulo.")
+		
+Fim;
+
+
+19. Ler 4 números inteiros e calcular a soma dos que forem par. 
+
+Inicio:
+	int [num1, num2, num3, num4] = 0;
+	int soma = 0;
+	leia(num1, num2, num3, num4);
+		faça (i=0; i > 4; i++);
+			se num[i] % 2 == 0;
+				soma = soma + num[i];
+				imprimir(soma);
+			senao
+		enquanto 
+Fim;
+
+
+20. Que informe se um dado ano é ou não bissexto. Obs: um ano é bissexto se ele for divisível 
+por 400 ou se ele for divisível por 4 e não por 100.
+
+Inicio:
+	int ano;
+	leia(ano);
+	se(ano%4 == 0 e ano%100 != 0 ou ano%400 == 0);
+		imprime("É Bissexto.");
+	senao 
+		imprime("Não é bissexto.");
+Fim;
